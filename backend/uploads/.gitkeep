@@ -1,0 +1,12 @@
+# Uploads Directory
+
+This directory is used to store uploaded resume files temporarily.
+
+Files in this directory are automatically processed and can be cleaned up periodically.
+
+## Important
+
+- This directory is excluded from version control
+- Files are stored with unique identifiers
+- Maximum file size: 5MB
+- Supported formats: PDF, DOCX

@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Uploads (user files)
+uploads/
+backend/uploads/*.pdf
+backend/uploads/*.jpg
+backend/uploads/*.png
+backend/uploads/*.docx
+!backend/uploads/.gitkeep
+
+# Trained data files
+*.traineddata
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.cache/
+.temp/
+.tmp/
