@@ -231,7 +231,7 @@ const LoginPage: React.FC = () => {
                   fullWidth
                   variant="outlined"
                   startIcon={<Google />}
-                  onClick={() => window.location.href = `${process.env.REACT_APP_API_URL || 'http://localhost:5000/api'}/auth/google`}
+                  onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/google`}
                   sx={{ py: 1.2 }}
                 >
                   Google
@@ -240,7 +240,7 @@ const LoginPage: React.FC = () => {
                   fullWidth
                   variant="outlined"
                   startIcon={<GitHub />}
-                  onClick={() => window.location.href = `${process.env.REACT_APP_API_URL || 'http://localhost:5000/api'}/auth/github`}
+                  onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/github`}
                   sx={{ py: 1.2 }}
                 >
                   GitHub

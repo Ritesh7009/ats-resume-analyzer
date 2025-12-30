@@ -1,6 +1,5 @@
 {
-  "framework": "create-react-app",
-  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "rewrites": [
