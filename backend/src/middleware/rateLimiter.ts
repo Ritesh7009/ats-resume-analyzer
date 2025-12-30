@@ -6,7 +6,7 @@ import config from '../config';
  */
 export const apiLimiter = rateLimit({
   windowMs: config.rateLimit.windowMs,
-  max: config.rateLimit.maxRequests,
+  max: 500, // Increased for production
   message: {
     success: false,
     error: 'Too many requests, please try again later.',
@@ -20,13 +20,14 @@ export const apiLimiter = rateLimit({
  */
 export const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // 10 attempts per window
+  max: 50, // 50 attempts per window
   message: {
     success: false,
     error: 'Too many authentication attempts, please try again after 15 minutes.',
   },
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => process.env.NODE_ENV === 'development',
 });
 
 /**
