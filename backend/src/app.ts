@@ -27,7 +27,16 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Passport initialization (for OAuth)
 app.use(passport.initialize());
 
-// Rate limiting
+// Health check (before rate limiting)
+app.get('/api/health', (_req, res) => {
+  res.json({
+    success: true,
+    message: 'ATS Resume Analyzer API is running',
+    timestamp: new Date().toISOString(),
+  });
+});
+
+// Rate limiting (exclude health check)
 app.use('/api', apiLimiter);
 
 // Static files for uploads (if needed)
@@ -38,15 +47,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/auth', oauthRoutes); // OAuth routes (Google, GitHub)
 app.use('/api/resume', resumeRoutes);
 app.use('/api/payment', paymentRoutes);
-
-// Health check
-app.get('/api/health', (_req, res) => {
-  res.json({
-    success: true,
-    message: 'ATS Resume Analyzer API is running',
-    timestamp: new Date().toISOString(),
-  });
-});
 
 // Error handling
 app.use(notFoundHandler);
