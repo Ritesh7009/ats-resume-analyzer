@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider } from './context/AuthContext';
 import theme from './theme';
 import ProtectedRoute from './components/common/ProtectedRoute';
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <AuthProvider>
         <Router>
+          <Analytics />
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<LandingPage />} />
