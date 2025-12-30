@@ -9,10 +9,6 @@ import {
   Card,
   CardContent,
   Chip,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   useTheme,
 } from '@mui/material';
 import {

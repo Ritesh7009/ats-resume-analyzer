@@ -8,8 +8,6 @@ import {
   Button,
   Chip,
   Card,
-  CardContent,
-  LinearProgress,
   Tabs,
   Tab,
   List,
@@ -156,11 +154,9 @@ const AnalysisPage: React.FC = () => {
     );
   }
 
-  const COLORS = ['#4caf50', '#ff9800', '#f44336', '#2196f3', '#9c27b0'];
-
   const keywordData = [
-    { name: 'Matched', value: analysis.keywords?.matched?.length || 0 },
-    { name: 'Missing', value: analysis.keywords?.missing?.length || 0 },
+    { name: 'Matched', value: analysis.keywords?.matched?.length || 0, color: '#4caf50' },
+    { name: 'Missing', value: analysis.keywords?.missing?.length || 0, color: '#f44336' },
   ];
 
   const sectionData = (analysis.sections || []).map((section) => ({

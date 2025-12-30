@@ -27,7 +27,6 @@ import {
   School,
   Build,
   Description,
-  CheckCircle,
   Warning,
   Save,
   ContentCopy,

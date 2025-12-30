@@ -6,9 +6,6 @@ import {
   Grid,
   Paper,
   Button,
-  Card,
-  CardContent,
-  CardActions,
   Chip,
   IconButton,
   Table,
@@ -37,7 +34,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 import Layout from '../components/layout/Layout';
-import { ScoreCircle } from '../components/analysis/ScoreDisplay';
 import { useAuth } from '../context/AuthContext';
 import { resumeApi } from '../services/apiService';
 import { Resume } from '../types';

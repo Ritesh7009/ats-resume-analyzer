@@ -14,7 +14,6 @@ const OAuthCallbackPage: React.FC = () => {
     const handleCallback = async () => {
       const accessToken = searchParams.get('accessToken');
       const refreshToken = searchParams.get('refreshToken');
-      const provider = searchParams.get('provider');
       const errorParam = searchParams.get('error');
 
       if (errorParam) {
